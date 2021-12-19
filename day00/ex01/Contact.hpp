@@ -6,9 +6,12 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 02:55:31 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/18 03:35:28 by rel-bour         ###   ########.fr       */
+/*   Updated: 2021/12/19 00:59:36 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 #include <iostream>
 #include <string>
@@ -22,7 +25,6 @@ class Contact
 		std::string nick_name;
 		std::string phone_number;
 		std::string darkest_secret;
-
 	public:
 		void set_fname(std::string fname);
 		void set_l_name(std::string lname);
@@ -35,3 +37,5 @@ class Contact
 		std::string get_phone_number();
 		std::string get_darkest_secret();
 };
+
+#endif

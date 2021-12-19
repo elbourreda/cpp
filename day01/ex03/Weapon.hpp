@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 09:56:13 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/19 00:44:54 by rel-bour         ###   ########.fr       */
+/*   Created: 2021/12/19 07:13:30 by rel-bour          #+#    #+#             */
+/*   Updated: 2021/12/19 07:35:57 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-#include "Contact.hpp"
+#include <iostream>
 
-class PhoneBook
+class Weapon
 {
 	private:
-		Contact contact[8];
+		std::string type;
 	public:
-		int add_contact(int len);
-		void display_contacts(int len);
-		void select_index(int i);
+		void setType(std::string Type)
+		{
+			type = Type;
+		}
+		const std::string &getType()
+		{
+			return (type);
+		}
+		
 };
 
 #endif

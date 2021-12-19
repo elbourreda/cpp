@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 09:56:13 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/19 00:44:54 by rel-bour         ###   ########.fr       */
+/*   Created: 2021/12/19 05:53:18 by rel-bour          #+#    #+#             */
+/*   Updated: 2021/12/19 05:53:58 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+Zombie *newZombie(std::string name)
 {
-	private:
-		Contact contact[8];
-	public:
-		int add_contact(int len);
-		void display_contacts(int len);
-		void select_index(int i);
-};
-
-#endif
+	Zombie *new_zombie = new Zombie(name);
+	return (new_zombie);
+}

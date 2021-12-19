@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 09:56:13 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/19 00:44:54 by rel-bour         ###   ########.fr       */
+/*   Created: 2021/12/19 05:11:21 by rel-bour          #+#    #+#             */
+/*   Updated: 2021/12/19 06:12:25 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+Zombie::Zombie(std::string Name)
 {
-	private:
-		Contact contact[8];
-	public:
-		int add_contact(int len);
-		void display_contacts(int len);
-		void select_index(int i);
-};
+	name = Name;
+}
 
-#endif
+Zombie::~Zombie()
+{
+	std::cout << name << " This is a debugging message" << std::endl;
+}
+
+void Zombie::announce(void)
+{
+	std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
+}

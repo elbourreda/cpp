@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 09:56:16 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/18 05:28:45 by rel-bour         ###   ########.fr       */
+/*   Updated: 2021/12/19 00:57:14 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int check_whitspace(std::string s)
 		return (1);
 	return (0);
 }
+
 std::string ft_getline(std::string prompt)
 {
 	std::string input;
@@ -63,7 +64,7 @@ std::string ft_getline(std::string prompt)
 	return (input);
 }
 
-int not_dijit(std::string s)
+int not_digit(std::string s)
 {
 	int i = 0;
 	while (s[i] && (s[i] == ' ' || s[i] == '\t') )
@@ -83,7 +84,7 @@ std::string ft_getline_phone(std::string prompt)
 	std::cout << prompt;
 	while (std::getline(std::cin, input))
 	{
-		if (!input.empty() && check_whitspace(input) && not_dijit(input))
+		if (!input.empty() && check_whitspace(input) && not_digit(input))
 			break;
 		std::cout << prompt;
 	}

@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 09:56:13 by rel-bour          #+#    #+#             */
-/*   Updated: 2021/12/19 00:44:54 by rel-bour         ###   ########.fr       */
+/*   Created: 2021/12/19 06:22:57 by rel-bour          #+#    #+#             */
+/*   Updated: 2021/12/19 06:23:24 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
+// Zombie* zombieHorde(int N, std::string name) 
+// {
+// 	Zombie **HordofZmbie = new Zombie[N]; 
 
-#include "Contact.hpp"
-
-class PhoneBook
-{
-	private:
-		Contact contact[8];
-	public:
-		int add_contact(int len);
-		void display_contacts(int len);
-		void select_index(int i);
-};
-
-#endif
+// 	return (HordofZmbie);
+// }
