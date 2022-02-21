@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 03:49:25 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/10 08:01:43 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/11 00:02:02 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ void Karen::error( void )
 void Karen::complain( std::string level )
 {
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	typedef void (Karen::*ptrToFuncs)();
+	
+	typedef void (Karen::*ptrToFuncs)(void);
+	
 	ptrToFuncs array[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
 	for (int i = 0; i < 4; i++)
 		while (!level.compare(levels[i]))

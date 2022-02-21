@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 03:49:25 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/10 08:10:33 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/10 22:47:12 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ void Karen::complain( std::string level )
 	typedef void (Karen::*ptrToFuncs)();
 	ptrToFuncs array[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
 	for (int i = 0; i < 4; i++)
-		while (!level.compare(levels[i]))
-		{
-			for (int j = i; i < 4; i++)
-			{
-				(this->*array[i])();
-			}
-			exit(0);
-		}
+		// while (!level.compare(levels[i]))
+		// {
+		// 	for (int j = i; i < 4; i++)
+		// 	{
+		// 		(this->*array[i])();
+		// 	}
+		// 	exit(0);
+		// }
 	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }

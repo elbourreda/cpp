@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 04:26:25 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/10 03:36:02 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/20 19:40:13 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,11 @@ int main(int ac, char *av[])
 	
 	std::ifstream ifile(filename);
 	std::ofstream ofile(filename + ".replace");
-	
 	while (std::getline(ifile, line))
 	{
 		line = ft_replace(line,s1,s2);
 		ofile << line << std::endl;
 	}
-
 	ofile.close();
 	ifile.close();
 }
