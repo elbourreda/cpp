@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:02:54 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/22 12:09:54 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/22 12:11:36 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ class Fixed
 			{
 				Fixed result;
 
-				result.value = this->value * F.value; // not working
+				result.value = this->value * F.value; // not working again
 				std::cout << "result (*) == " << result.value << "\n";
 				return (result);
 			}
