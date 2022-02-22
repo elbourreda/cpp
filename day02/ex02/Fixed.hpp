@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:02:54 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/21 19:17:48 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/22 12:09:54 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ class Fixed
 				result.value = this->value + F.value;
 				return (result);
 			}
+			
 			Fixed operator-(Fixed const & F)
 			{
 				Fixed result;
@@ -73,19 +74,46 @@ class Fixed
 				result.value = this->value - F.value;
 				return (result);
 			}
+			
 			Fixed operator*(Fixed const & F)
 			{
 				Fixed result;
 
-				result.value = this->value * F.value;
+				result.value = this->value * F.value; // not working
+				std::cout << "result (*) == " << result.value << "\n";
 				return (result);
 			}
+			
 			Fixed operator/(Fixed const & F)
 			{
 				Fixed result;
 
 				result.value = this->value / F.value;
 				return (result);
+			}
+			
+			Fixed operator++() // ++i
+			{
+				this->value++;
+				return (*this);
+			}
+			Fixed operator++(int) // i++
+			{
+				Fixed tmp = *this;
+				this->value++;
+				return (tmp);
+			}
+			
+
+			// min & max
+			Fixed &min()
+			{
+				return (*this);
+			}
+			Fixed &max()
+			{
+				
+				return (*this);
 			}
 };
 
