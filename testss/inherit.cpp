@@ -6,7 +6,7 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 15:32:05 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/23 13:02:06 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/23 16:38:54 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,29 +158,40 @@ using namespace std;
 class base
 {
 	protected:
+	public:
 		int x;
-		int sett_gett(int x)
+		void pp()
 		{
-			this->x = x;
-			return (this->x);
+			cout << "wach al 7biba from ==> base class\n";
 		}
 };
 
-class childs : protected base
+class childs : private base
 {
 	public:
-		void print(int i)
+		void pp()
 		{
-			cout << this->sett_gett(i) << "\n";
+			x = 10;
+			cout << x << " wach al 7biba from ==> derived classs\n";
 		}
 };
 
+class malo : private childs
+{
+	public:
+		void op()
+		{
+			// x = 10;
+			// cout << x << " wach al 7biba from ==> derived classs\n";
+		}
+};
 
 int main()
 {
-	childs o;
+	childs *o = new childs;
+	o->pp();
 
-	cout << o.sett_gett(111) << "\n";
-	o.print(222);
+	malo y;
 
+	y.op();
 }
