@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 18:00:25 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/25 15:45:06 by rel-bour         ###   ########.fr       */
+/*   Created: 2022/02/25 15:47:32 by rel-bour          #+#    #+#             */
+/*   Updated: 2022/02/25 16:28:31 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main()
+class ScavTrap : public ClapTrap
 {
-	// ClapTrap player1("player1");
-	
-	// ClapTrap player2("player2");
-	// player1.attack("player2");
-	// player1.takeDamage(5);
-	// player1.beRepaired(10);
-	// player2.attack("player1");
-	// player2.beRepaired(4);
-	// player2.takeDamage(10);
-	
-	ClapTrap player1;
-	player1.attack("aziizz");
-	
-	return (0);
-}
+	private:
+		/* data */
+	public:
+		ScavTrap();
+		ScavTrap(ScavTrap &opj);
+		~ScavTrap();
+		ScavTrap & operator=(ScavTrap &ScavTrap);
+
+		ScavTrap(std::string name);
+		void attack(const std::string& target);
+
+		void getHp(void){
+			std::cout << "Hit Points = " << this->HitPoints << std::endl;
+		}
+		void guardGate();
+};
+
+#endif

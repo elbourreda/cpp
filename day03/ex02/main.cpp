@@ -6,12 +6,13 @@
 /*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 18:00:25 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/02/25 16:29:39 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/02/25 16:41:44 by rel-bour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
@@ -49,14 +50,20 @@ int main()
 	// o = p;
 	// o.getHp();
 
-	ScavTrap p("r");
-	p.attack("r2");
-	p.takeDamage(1);
-	p.getHp();
-	p.guardGate();
+	// ScavTrap p("r");
+	// p.attack("r2");
+	// p.takeDamage(1);
+	// p.getHp();
+	// p.guardGate();
 
-	ScavTrap o;
-	o = p;
-	o.getHp();
+	// ScavTrap o;
+	// o = p;
+	// o.getHp();
+
+
+
+	FragTrap x("hell nah");
+
+	
 	return (0);
 }
