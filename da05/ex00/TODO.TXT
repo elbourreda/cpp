@@ -1,0 +1,33 @@
+// TODO LIST
+
+- Bureaucrat Class
+	*  Name  => string const
+	*  Grade => int (1 -> 150)  ====> 1 the highest | 150 the lowest,
+	*  getName()
+	*  getGrade()
+
+-  invalid grade =>  throw an exception :
+						> Bureaucrat::GradeTooHighException
+						> Bureaucrat::GradeTooLowException.
+
+	*  functions to increment the bureaucrat grade   \    If the grade is out of range => throw the same exceptions as the constructor.
+	*  functions to decrement the bureaucrat grade   /    If the grade is out of range => throw the same exceptions as the constructor.
+			-> NOTE : (n = 3) increment(n) = 2; 
+					  (n = 3) decrement(n) = 4; 
+
+- The thrown exceptions must be catchable using try and catch blocks:
+		try
+		{
+		/* do some stuff with bureaucrats */
+		}
+		catch (std::exception & e)
+		{
+		/* handle exception */
+		}
+
+
+- overload of the insertion (<<):
+	OUTPUT =>>  " <name>, bureaucrat grade <grade>. "
+
+
+***  turn in some tests to prove everything works as expected
