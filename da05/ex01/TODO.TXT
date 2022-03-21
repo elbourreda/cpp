@@ -13,17 +13,17 @@ V	|			* grade required to execute it => constant int
 	|	=) public methods
 V	|			* beSigned() :
 V	|						- Bureaucrat as parameter. 
-	|						- It changes the form status to signed if the bureaucrat’s grade is high enough
-	|						- (higher or egal to the required one).
-	|						- Remember, grade 1 is higher than grade 2.
-	|						- If the grade is too low, throw a Form::GradeTooLowException
+V	|						- It changes the form status to signed if the bureaucrat’s grade is high enough
+V	|						- (higher or egal to the required one).
+V	|						- Remember, grade 1 is higher than grade 2.
+V	|						- If the grade is too low, throw a Form::GradeTooLowException
 
 
-	|- Bureaucrat class:
-	|			* signForm() : 
-	|						-  If the form got signed it will print something like:
-	|										- <bureaucrat> signed <form>
-	|										- <bureaucrat> couldn’t sign <form> because <reason>.
+V	|- Bureaucrat class:
+V	|			* signForm() : 
+V	|						-  If the form got signed it will print something like:
+V	|										- <bureaucrat> signed <form>
+V	|										- <bureaucrat> couldn’t sign <form> because <reason>.
 
 
 	|	- The grades of the Form ==> follow the same rules that apply to the Bureaucrat
@@ -33,4 +33,4 @@ v	|						- Form::GradeTooLowException
 
 V	|	- getters for all attributes
 
-	| - overload of the insertion («) =>  operator that prints all the form’s informations.
+V	| - overload of the insertion («) =>  operator that prints all the form’s informations.

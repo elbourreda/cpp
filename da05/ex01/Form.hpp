@@ -11,6 +11,7 @@ class Form
 		const int  			_gradeRequired;
 		const int			_gradeToExecute;
 		bool  				_isSigned;
+		Bureaucrat x;
 	public:
 
 		Form(void);						 // const variables need to initial list

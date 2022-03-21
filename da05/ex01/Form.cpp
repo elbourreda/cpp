@@ -42,11 +42,19 @@ std::ostream &	operator<<( std::ostream & out, Form const & instance)
 
 void Form::beSigned(Bureaucrat &bureaucrat)
 {
-		// - Bureaucrat as parameter. 
-		// - It changes the form status to signed if the bureaucrat’s grade is high enough
-		// - (higher or egal to the required one).
-		// - Remember, grade 1 is higher than grade 2.
-		// - If the grade is too low, throw a Form::GradeTooLowException
+		//  |V	|  - Bureaucrat as parameter. 
+		//  |V	|  - It changes the form status to signed if the bureaucrat’s grade is high enough
+		//  |V	|  - (higher or egal to the required one).
+		//  |V	|  - Remember, grade 1 is higher than grade 2.
+		//  |V	|  - If the grade is too low, throw a Form::GradeTooLowException
+		if (bureaucrat.getGrade() <= this->getGradeRequired())
+		{
+			this->_isSigned = true;
+		}
+		else
+		{
+			throw (Form::GradeTooLowException());
+		}
 }
 
 const char* Form::GradeTooHighException::what() const throw()
