@@ -5,7 +5,7 @@ int main()
 	{
 		try 
 		{
-			Bureaucrat x("test1", 1);
+			Bureaucrat x("test1", -1);
 			std::cout << x << "\n";
 			x.increment();
 		}
@@ -23,7 +23,7 @@ int main()
 	{
 		try 
 		{
-			Bureaucrat x("test2", 150);
+			Bureaucrat x("test2", 151);
 			std::cout << x << "\n";
 			x.decrement();
 		}

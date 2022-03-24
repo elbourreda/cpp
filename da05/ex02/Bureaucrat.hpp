@@ -40,6 +40,9 @@ class Bureaucrat
 
 		/// ex01
 		void signForm(Form const &F) const;
+
+		//ex02
+		void executeForm(Form const & form);
 };
 
 std::ostream & operator<<(std::ostream & out, Bureaucrat const &B);

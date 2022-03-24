@@ -52,10 +52,10 @@ void Form::beSigned(Bureaucrat &bureaucrat)
 		{
 			this->_isSigned = true;
 		}
-		// else
-		// {
-		// 	throw (Form::GradeTooLowException());
-		// }
+		else
+		{
+			throw (Form::GradeTooLowException());
+		}
 }
 
 const char* Form::GradeTooHighException::what() const throw()
@@ -87,6 +87,19 @@ const int		   Form::getGradeToExecute() const
 bool  			   Form::getIsSigned() const
 {
 	return (this->_isSigned);
+}
+
+
+
+void Form::execute(Bureaucrat const & executor) const
+{
+	if (this->getIsSigned() == false)
+	{
+		// throw ex
+		throw (Form::UnsignedFormException());
+	}
+	// call the other function
+	this->formExec(executor);	
 }
 
 const char* Form::UnsignedFormException::what() const throw()
