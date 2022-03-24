@@ -1,0 +1,19 @@
+// TODO
+
+================================
+
+// ex03
+
+- Intern class : 
+	 * makeForm() 
+	    - takes two strings
+		- s1 = the name of a form
+		- s2 = the target of the form
+		-  return a pointer to a Form object (whose name is the one passed as parameter) :
+						* whose target will be initialized to the second parameter
+		- print => "Intern creates <form>"
+		- If the form name passed as parameter doesn’t exist => print an explicit error message.
+		- avoid ugly solutions like using a if/elseif/else
+
+		ex : obj.makeForm("robotomy request", "Bender");
+				-  this will code creates a RobotomyRequestForm targeted on "Bender"

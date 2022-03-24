@@ -13,15 +13,13 @@ V	|					* check that the form is signed
 V	|					* the grade of the bureaucrat attempting to execute the form is high enough
 V	|				else
 V	|					* Otherwise, throw an appropriate exception
-	|				
+				
 V	|				call another function inside to execute the form:
 V	|						* this function most be a pure virtual function
 V	|						* implement it in the derived class of the form
 V	|						* check if the requirements is enogh to exec the form -> execute()
 V	|						* throw exep if not
 						
-
-
 V	|- class ShrubberyCreationForm : public form
 V	|		* (string) target => take from constructor
 V	|		* (int) sing = 145
@@ -33,7 +31,8 @@ V	|- RobotomyRequestForm : public form
 V	|		* (string) target => take from constructor
 V	|		* (int) sing = 72
 V	|		* (int) exec = 45
-	|		* Makes some drilling noises. Then, informs that <target> has been robotomized successfully 50% of the time. Otherwise, informs that the robotomy failed.
+	|		* Makes some drilling noises. Then, informs that <target> has been robotomized successfully 50% of the time. Otherwise,
+					.. informs that the robotomy failed.
 
 V	|- PresidentialPardonForm : public form
 V	|		* (string) target => take from constructor

@@ -45,7 +45,7 @@ void DoneForm(std::string target)
 {
 	std::string filename = target + "__shrubbery";
 	std::ofstream file(filename);
-	// writes ASCII trees inside it
+	
 	file << "     ccee88oo\n";
 	file << "  C8O8O8Q8PoOb o8oo\n";
 	file << " dOB69QO8PdUOpugoO9bD\n";
@@ -64,13 +64,7 @@ void ShrubberyCreationForm::formExec(Bureaucrat const & executor)  const
 {
 	if (executor.getGrade() > this->getGradeToExecute())
 	{
-		// throw exeption
-		// this computer does not meet minimum requirements
 		throw (Form::GradeTooLowException());
 	}
-	DoneForm(this->_target); // getTarget() need;
-
-	// call function to drow an asscii tree in the output
-	// Create a file <target>_shrubbery in the working directory, and writes ASCII trees inside it
-
+	DoneForm(this->_target);
 }

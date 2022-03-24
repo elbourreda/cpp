@@ -52,10 +52,10 @@ void Form::beSigned(Bureaucrat &bureaucrat)
 		{
 			this->_isSigned = true;
 		}
-		// else
-		// {
-		// 	throw (Form::GradeTooLowException());
-		// }
+		else
+		{
+			throw (Form::GradeTooLowException());
+		}
 }
 
 const char* Form::GradeTooHighException::what() const throw()

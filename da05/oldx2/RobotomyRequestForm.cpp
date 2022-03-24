@@ -5,7 +5,7 @@
 // * * (int) sing = 72
 // * * (int) exec = 45
 
-RobotomyRequestForm::RobotomyRequestForm(void)
+RobotomyRequestForm::RobotomyRequestForm(void) : Form()
 {
     std::cout << "RobotomyRequestForm Constructor called" << std::endl;
 	this->_target = "NoTarget";
@@ -13,7 +13,7 @@ RobotomyRequestForm::RobotomyRequestForm(void)
 	this->_exec = 45;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45)
 {
     std::cout << "RobotomyRequestForm Constructor called" << std::endl;
 
@@ -47,11 +47,15 @@ void RobotomyRequestForm::formExec(Bureaucrat const & executor)  const
 {
 	if (executor.getGrade() > this->getGradeToExecute())
 	{
-		// throw exeption
-		// this computer does not meet minimum requirements
 		throw (Form::GradeTooLowException());
 	}
-
-	// call function to 
-	// Makes some drilling noises. Then, informs that <target> has been robotomized successfully 50% of the time. Otherwise, informs that the robotomy failed.
+	std::cout << "Some drilling noises ..." << std::endl;
+	if (time(NULL) % 2)
+	{
+		std::cout << this->_target << " has been robotomized successfully" << std::endl;
+	}
+	else
+	{
+		std::cout << "Unfortunately The robotomy is failed" << std::endl;
+	}
 }

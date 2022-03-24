@@ -1,7 +1,7 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
-// #include "ShrubberyCreationForm.hpp"
-// #include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 // ShrubberyCreationForm sing = 145 exec = 137
 // RobotomyRequestForm sing = 72 exec = 45
@@ -12,16 +12,18 @@ int main()
 	try
 	{
 		Bureaucrat ins("ShrubberyCreation", 143);
-		// Form *form = new ShrubberyCreationForm("HOME");
+		Form *form = new ShrubberyCreationForm("HOME");
 		
-		// std::cout << std::endl;
-		// std::cout << std::endl;
-		// std::cout << std::endl;
+		std::cout << std::endl;
+		std::cout << std::endl;
+		std::cout << std::endl;
 		
-		// form->beSigned(ins);
-		// std::cout << std::endl;
-		// std::cout << std::endl;
+		form->beSigned(ins);
+		std::cout << std::endl;
+		std::cout << std::endl;
 		
+	
+
 
 		std::cout << std::endl;
 		// delete form;
