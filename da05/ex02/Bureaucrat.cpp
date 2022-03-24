@@ -90,7 +90,7 @@ std::ostream & operator<<(std::ostream & out, Bureaucrat const &B)
 }
 
 
-/// ex01
+/// ex01 
 void Bureaucrat::signForm(Form const &F) const 
 {
 		/// exeption 
@@ -110,6 +110,7 @@ void Bureaucrat::signForm(Form const &F) const
 		}
 }
 
+// ex02
 void Bureaucrat::executeForm(Form const & form)
 {
 	try

@@ -10,15 +10,15 @@ V	|		* execute(Bureaucrat const & executor) const ==>
 V	|			* to execute the form’s action
 V	|				if 
 V	|					* check that the form is signed
-	|					* the grade of the bureaucrat attempting to execute the form is high enough
-	|				else
-	|					* Otherwise, throw an appropriate exception
+V	|					* the grade of the bureaucrat attempting to execute the form is high enough
+V	|				else
+V	|					* Otherwise, throw an appropriate exception
 	|				
 V	|				call another function inside to execute the form:
 V	|						* this function most be a pure virtual function
 V	|						* implement it in the derived class of the form
 V	|						* check if the requirements is enogh to exec the form -> execute()
-	|						* throw exep if not
+V	|						* throw exep if not
 						
 
 
@@ -29,28 +29,23 @@ V	|		* (int) exec = 137
 	|		* Create a file <target>_shrubbery in the working directory, and writes ASCII trees inside it
 
 
-- RobotomyRequestForm : public form
-		* (string) target => take from constructor
-		* (int) sing = 72
-		* (int) exec = 45
-		* Makes some drilling noises. Then, informs that <target> has been robotomized successfully 50% of the time. Otherwise, informs that the robotomy failed.
+V	|- RobotomyRequestForm : public form
+V	|		* (string) target => take from constructor
+V	|		* (int) sing = 72
+V	|		* (int) exec = 45
+	|		* Makes some drilling noises. Then, informs that <target> has been robotomized successfully 50% of the time. Otherwise, informs that the robotomy failed.
 
-- PresidentialPardonForm : public form
-		* (string) target => take from constructor
-		* (int) sing = 25
-		* (int) exec = 5
-		* Informs that <target> has been pardoned by Zaphod Beeblebrox.
+V	|- PresidentialPardonForm : public form
+V	|		* (string) target => take from constructor
+V	|		* (int) sing = 25
+V	|		* (int) exec = 5
+	|		* Informs that <target> has been pardoned by Zaphod Beeblebrox.
 
-
-
- 
-
-
- - class bureaucrat
-		-  executeForm(Form const & form):
-				* It must attempt to execute the form ==> 
-						> If it’s successful,    " <bureaucrat> executed <form> "
-						> If is not,             "print an explicit error message"
+v	 - class bureaucrat
+v			-  executeForm(Form const & form):
+v					* It must attempt to execute the form ==> 
+v							> If it’s successful,    " <bureaucrat> executed <form> "
+v							> If is not,             "print an explicit error message"
 
 
 - Implement and turn in some tests to ensure everything works as expected.
