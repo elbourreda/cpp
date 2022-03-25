@@ -94,15 +94,17 @@ std::ostream & operator<<(std::ostream & out, Bureaucrat const &B)
 void Bureaucrat::signForm(Form const &F) const 
 {
 		/// exeption 
-		try{
-			if (F.getIsSigned()) 
-			{
-				std::cout << this->_name << " signed " << F.getName() << std::endl;
-			}
-			else
-			{
-				throw (Form::UnsignedFormException());
-			}
+		try {
+
+				this->bes
+				if (F.getIsSigned())
+				{
+					std::cout << this->_name << " signed " << F.getName() << std::endl;
+				}
+				else
+				{
+					throw (Form::UnsignedFormException());
+				}
 		}
 		catch (std::exception &e)
 		{

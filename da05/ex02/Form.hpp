@@ -2,20 +2,19 @@
 # define FORM_HPP
 
 #include <iostream>
-// #include "Bureaucrat.hpp"
 class Bureaucrat;
 
 class Form
 {
 	private:
 		const std::string	_name;
-		const int  			_gradeRequired;
+		const int  			_gradeToSign;
 		const int			_gradeToExecute;
 		bool  				_isSigned;
 	public:
 
-		Form(void);						 // const variables need to initial list
-		Form(const Form &instance);		 // const variables need to initial list
+		Form(void);				
+		Form(const Form &instance);
 		virtual ~Form();
 		Form & operator = (const Form &instance);
 		Form(std::string name, int gRequired, int gExecute);
@@ -46,7 +45,6 @@ class Form
 		//ex02
 		void execute(Bureaucrat const & executor) const;
 		virtual void formExec(Bureaucrat const & executor) const = 0;
-		// virtual void formExec() const = 0;
 
 };
 

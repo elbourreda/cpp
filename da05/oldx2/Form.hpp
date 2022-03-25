@@ -21,17 +21,17 @@ class Form
 		Form(std::string name, int gRequired, int gExecute);
 		class GradeTooHighException : public std::exception
 		{
-			public:
+			//public:
 				const char * what() const throw();
 		};
 		class GradeTooLowException : public std::exception
 		{
-			public:
+			//public:
 				const char * what() const throw();
 		};
 		class UnsignedFormException : public std::exception
 		{
-			public:
+			//public:
 				const char* what() const throw();
 		};
 		

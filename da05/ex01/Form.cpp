@@ -41,7 +41,7 @@ std::ostream &	operator<<( std::ostream & out, Form const & instance)
 	return out;
 }
 
-void Form::beSigned(Bureaucrat &bureaucrat)
+void Form::beSigned(Bureaucrat &bureaucrat) 
 {
 		//  |V	|  - Bureaucrat as parameter. 
 		//  |V	|  - It changes the form status to signed if the bureaucrat’s grade is high enough
@@ -67,7 +67,6 @@ const char* Form::GradeTooLowException::what() const throw()
 {
 	return ("The Grade is Too Low");
 }
-
 
 const std::string  Form::getName() const
 {
