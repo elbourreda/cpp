@@ -2,6 +2,7 @@
 # define INTERN_HPP
 
 #include <iostream>
+#include "Form.hpp"
 
 class Intern
 {
@@ -10,8 +11,7 @@ class Intern
 		Intern(const Intern &instance);
 		~Intern();
 		Intern & operator = (const Intern &instance);
-		// Form* makeForm(std::string FormName, std::string target)
-		void makeForm(std::string FormName, std::string target);
+		Form* makeForm(std::string FormName, std::string target);
 		class FormNotExistException : public std::exception
 		{
 			public:

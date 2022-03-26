@@ -1,6 +1,9 @@
 #include "Intern.hpp"
-
-class Form;
+#include "Form.hpp"
+#include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 Intern::Intern(void)
 {
@@ -30,29 +33,26 @@ const char* Intern::FormNotExistException::what() const throw()
 
 Form *robotomyrequest(std::string target)
 {
-	// Form *robotomyform = new RobotomyRequestForm(target);
-	Form *robotomyform;
+	Form *robotomyform = new RobotomyRequestForm(target);
 
 	return (robotomyform);
 }
 
 Form *shrubberycreation(std::string target)
 {
-	// Form *robotomyform = new ShrubberyCreationForm(target);
-	Form *shrubberyform;
+	Form *shrubberyform = new ShrubberyCreationForm(target);
 
 	return (shrubberyform);
 }
 
 Form *presidentialpardon(std::string target)
 {
-	// Form *robotomyform = new PresidentialPardonForm(target);
-	Form *presidentialpardonform;
+	Form *presidentialpardonform = new PresidentialPardonForm(target);
 
 	return (presidentialpardonform);
 }
 
-void Intern::makeForm(std::string FormName, std::string target)
+Form* Intern::makeForm(std::string FormName, std::string target)
 {
 	std::string forms[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
 	Form* (*Pforms[3])(std::string) = {&robotomyrequest, &shrubberycreation, &presidentialpardon};
@@ -68,10 +68,8 @@ void Intern::makeForm(std::string FormName, std::string target)
 	}
 	if (index == -1)
 	{
-		// print an explicit error message.
 		throw Intern::FormNotExistException();
 	}
 	std::cout << "Intern creates " << forms[index] << std::endl;
-	// (*Pforms[index])();
-	// return (p_forms[index])
+	return ((Pforms[index](target)));
 }
