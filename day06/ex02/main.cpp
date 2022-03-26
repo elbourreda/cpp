@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rel-bour <rel-bour@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qavsxb <qavsxb@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 11:14:28 by rel-bour          #+#    #+#             */
-/*   Updated: 2022/03/26 11:58:12 by rel-bour         ###   ########.fr       */
+/*   Updated: 2022/03/26 18:40:43 by qavsxb           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,7 @@ void identify(Base* p)
 		{
 			std::cout << "C\n";
 		}
-	}
-
-	
-
-	
+	}	
 }
 
 void identify(Base& p)
@@ -88,15 +84,17 @@ Base * generate(void)
 	return (p);
 }
 
-
-
 int main()
 {
-	Base *p = generate();
-	
+	Base *p = generate();	
 	Base &ref = *p;
 
-	// identify(ref);
+	std::cout << "Using pointer" << std::endl;
+	identify(ref);
+
+	std::cout << "---------------" << std::endl;
+
+	std::cout << "Using reference" << std::endl;
 	identify(p);
 
 }
