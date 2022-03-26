@@ -1,0 +1,18 @@
+// EX01
+
+	-  create a non-empty Data structure
+		* (it means it has data members)
+
+	- uintptr_t serialize(Data* ptr);
+		* It takes a pointer
+		* converts it to the unsigned integer type uintptr_t 
+
+	- Data* deserialize(uintptr_t raw);
+		* takes an unsigned integer parameter
+		* converts it to a pointer to Data.
+
+
+- Use serialize() on the address of the Data object and pass its return value to deserialize().
+
+- Then, ensure the return value of deserialize() compares equal to the original pointer.
+
