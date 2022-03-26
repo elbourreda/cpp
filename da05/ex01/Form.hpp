@@ -1,8 +1,7 @@
 #ifndef FORM_HPP
 # define FORM_HPP
 
-#include <iostream>
-// #include "Bureaucrat.hpp"
+# include <iostream>
 class Bureaucrat;
 
 class Form
@@ -13,9 +12,8 @@ class Form
 		const int			_gradeToExecute;
 		bool  				_isSigned;
 	public:
-
-		Form(void);						 // const variables need to initial list
-		Form(const Form &instance);		 // const variables need to initial list
+		Form(void);				
+		Form(const Form &instance);
 		~Form();
 		Form & operator = (const Form &instance);
 		Form(std::string name, int gRequired, int gExecute);
@@ -38,8 +36,7 @@ class Form
 		const int  		   getGradeRequired() const ;
 		const int		   getGradeToExecute() const ;
 		bool  			   getIsSigned() const ;
-
-		void beSigned(Bureaucrat &bureaucrat) ;
+		void 				beSigned(Bureaucrat &bureaucrat) ;
 };
 
 std::ostream &	operator<<( std::ostream & ostr, Form const & instance);

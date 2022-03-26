@@ -34,7 +34,7 @@ Form & Form::operator = (const Form &instance)
 std::ostream &	operator<<( std::ostream & out, Form const & instance)
 {
 	out << "Name : " << instance.getName() << std::endl;
-	out << "is signed : " << instance.getIsSigned() << std::endl;
+	out << "is signed : " << std::boolalpha << instance.getIsSigned() << std::endl;
 	out << "grade required to sign it : " << instance.getGradeRequired() << std::endl;
 	out << "grade required to execute it : " << instance.getGradeToExecute();
 	return out;
@@ -89,10 +89,15 @@ void Form::execute(Bureaucrat const & executor) const
 		throw (Form::UnsignedFormException());
 	}
 	this->formExec(executor);	
-	std::cout << this->getName() << " executed successfully" << std::endl;
+	std::cout << "The Form executed successfully" << std::endl;
 }
 
 const char* Form::UnsignedFormException::what() const throw()
 {
 	return ("The Form is not Signed");
+}
+
+const char* Form::ReqToExecException::what() const throw()
+{
+	return ("Couldn't Execute The form because The Grade is Too Low");
 }

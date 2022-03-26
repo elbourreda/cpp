@@ -38,7 +38,7 @@ class Bureaucrat
 		};
 
 		/// ex01
-		void signForm(Form const &F) const;
+		void signForm(Form &F);
 
 		//ex02
 		void executeForm(Form const & form);

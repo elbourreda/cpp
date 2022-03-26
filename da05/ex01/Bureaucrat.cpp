@@ -23,7 +23,7 @@ Bureaucrat & Bureaucrat::operator = (const Bureaucrat &instance)
     return (*this);
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name) // need some help
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
     std::cout << "Bureaucrat Constructor called" << std::endl;
 
@@ -82,31 +82,28 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("The Grade is Too Low");
 }
 
-
 std::ostream & operator<<(std::ostream & out, Bureaucrat const &B)
 {
 	out << B.getName() << ", bureaucrat grade " << B.getGrade();
 	return (out);
 }
 
-
-/// ex01
-void Bureaucrat::signForm(Form const &F) const 
+void Bureaucrat::signForm(Form &F) 
 {
-		/// exeption 
-		try{
-			
-			if (F.getIsSigned()) 
-			{
-				std::cout << this->_name << " signed " << F.getName() << std::endl;
-			}
-			else
-			{
-				throw (Form::UnsignedFormException());
-			}
-		}
-		catch (std::exception &e)
+	try
+	{
+		F.beSigned(*this);
+		if (F.getIsSigned()) 
 		{
-			std::cout << this->_name << " couldn’t sign " <<  F.getName() << " because " << e.what() << std::endl;
+			std::cout << this->_name << " signed " << F.getName() << std::endl;
 		}
+		else
+		{
+			throw (Form::UnsignedFormException());
+		}
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->_name << " couldn’t sign " <<  F.getName() << " because " << e.what() << std::endl;
+	}
 }

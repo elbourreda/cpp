@@ -34,7 +34,7 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 
 void DoneForm(std::string target)
 {
-	std::string filename = target + "__shrubbery";
+	std::string filename = target + "_shrubbery";
 	std::ofstream file(filename);
 	
 	file << "     ccee88oo\n";
@@ -53,9 +53,9 @@ void DoneForm(std::string target)
 
 void ShrubberyCreationForm::formExec(Bureaucrat const & executor)  const
 {
-	if (executor.getGrade() > this->getGradeToExecute())
+	if (executor.getGrade() > this->getGradeToExecute()) // check
 	{
-		throw (Form::GradeTooLowException());
+		throw (Form::ReqToExecException());
 	}
 	DoneForm(this->getName());
 }

@@ -36,7 +36,7 @@ void RobotomyRequestForm::formExec(Bureaucrat const & executor)  const
 {
 	if (executor.getGrade() > this->getGradeToExecute())
 	{
-		throw (Form::GradeTooLowException());
+		throw (Form::ReqToExecException());
 	}
 	std::cout << "Some drilling noises ..." << std::endl;
 	if (time(NULL) % 2)

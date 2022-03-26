@@ -33,21 +33,15 @@ Form & Form::operator = (const Form &instance)
 
 std::ostream &	operator<<( std::ostream & out, Form const & instance)
 {
-	/// here ndiro chi print 
 	out << "Name : " << instance.getName() << std::endl;
-	out << "is signed : " << instance.getIsSigned() << std::endl;
+	out << "is signed : " << std::boolalpha << instance.getIsSigned() << std::endl;
 	out << "grade required to sign it : " << instance.getGradeRequired() << std::endl;
 	out << "grade required to execute it : " << instance.getGradeToExecute();
 	return out;
 }
 
-void Form::beSigned(Bureaucrat &bureaucrat) 
+void Form::beSigned(Bureaucrat &bureaucrat)
 {
-		//  |V	|  - Bureaucrat as parameter. 
-		//  |V	|  - It changes the form status to signed if the bureaucrat’s grade is high enough
-		//  |V	|  - (higher or egal to the required one).
-		//  |V	|  - Remember, grade 1 is higher than grade 2.
-		//  |V	|  - If the grade is too low, throw a Form::GradeTooLowException
 		if (bureaucrat.getGrade() <= this->getGradeRequired())
 		{
 			this->_isSigned = true;

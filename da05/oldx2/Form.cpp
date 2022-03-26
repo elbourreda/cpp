@@ -111,3 +111,8 @@ const char* Form::UnsignedFormException::what() const throw()
 {
 	return ("The Form is not Signed");
 }
+
+const char* Form::UnsignedFormException::what() const throw()
+{
+	return ("The Form is not Signed");
+}

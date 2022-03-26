@@ -33,6 +33,11 @@ class Form
 			public:
 				const char* what() const throw();
 		};
+		class ReqToExecException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
 		
 		const std::string  getName() const ;
 		const int  		   getGradeRequired() const ;
@@ -40,7 +45,6 @@ class Form
 		bool  			   getIsSigned() const ;
 
 		void beSigned(Bureaucrat &bureaucrat);
-
 
 		//ex02
 		void execute(Bureaucrat const & executor) const;
