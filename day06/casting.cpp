@@ -24,11 +24,13 @@ int main()
 
     // int fg = static_cast<int>(f);
     // float fgd = static_cast<float>(fg);
+    float *h = new float;
 
-    long long fd = static_cast<long long>(c);
-    std::cout << fd;
+    *h = 11;
+    void *v;
+    std::cout <<sizeof(v );
 
-
+    delete h;
 
 
 }
