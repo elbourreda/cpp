@@ -1,0 +1,13 @@
+// ex01
+
+-  function template iter():
+		*  takes 3 parameters
+		*  p1 : the address of an array
+		*  p2 : the length of the array
+		*  p3 : a function that will be call on every element of the array
+
+- Turn in a main.cpp file that contains your tests
+
+- iter function template must work with any type of array
+
+- The third parameter can be an instantiated function template.

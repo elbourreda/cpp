@@ -1,0 +1,23 @@
+// ex02
+
+- class template Array: (contains elements of type T)
+	* constructors :
+				|> no parameter: 		    > Creates an empty array
+
+				|> int (n) as a parameter:  > Creates an array of (n) elements initialized by default.
+										    > Tip: Try to compile int * a = new int(); then display *a.
+
+				|> Construction by copy and assignment operator :
+										    > In both cases, modifying either the original array or its copy after copying musn’t affect the other array.
+				
+				|> the operator new[] to allocate memory ((allocating memory in advance) is forbidden)
+											> Your program must never access nonallocated memory
+				
+				|> Elements can be accessed through the subscript operator: [ ].
+
+				|> When accessing an element with the [ ] operator, if its index is out of bounds, an
+																									std::exception is thrown
+
+				|> function size() :
+									> returns the number of elements in the array 
+									> musn’t modify the current instance.
